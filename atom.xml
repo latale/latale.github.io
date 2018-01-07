@@ -37,26 +37,6 @@
   </entry>
   
   <entry>
-    <title>好看的建筑</title>
-    <link href="latale.github.io/2017/11/11/build1/"/>
-    <id>latale.github.io/2017/11/11/build1/</id>
-    <published>2017-11-11T15:11:09.000Z</published>
-    <updated>2018-01-06T18:27:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="好看的建筑"><a href="#好看的建筑" class="headerlink" title="好看的建筑- -"></a>好看的建筑- -</h2><a id="more"></a><p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;好看的建筑&quot;&gt;&lt;a href=&quot;#好看的建筑&quot; class=&quot;headerlink&quot; title=&quot;好看的建筑- -&quot;&gt;&lt;/a&gt;好看的建筑- -&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Laravel常用实例类</title>
     <link href="latale.github.io/2017/11/11/ajax/"/>
     <id>latale.github.io/2017/11/11/ajax/</id>
@@ -75,6 +55,26 @@
       <category term="laravel" scheme="latale.github.io/tags/laravel/"/>
     
       <category term="php" scheme="latale.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好看的建筑</title>
+    <link href="latale.github.io/2017/11/11/build1/"/>
+    <id>latale.github.io/2017/11/11/build1/</id>
+    <published>2017-11-11T15:11:09.000Z</published>
+    <updated>2018-01-06T18:27:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="好看的建筑"><a href="#好看的建筑" class="headerlink" title="好看的建筑- -"></a>好看的建筑- -</h2><a id="more"></a><p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;好看的建筑&quot;&gt;&lt;a href=&quot;#好看的建筑&quot; class=&quot;headerlink&quot; title=&quot;好看的建筑- -&quot;&gt;&lt;/a&gt;好看的建筑- -&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
     
   </entry>
   
