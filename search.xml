@@ -19,7 +19,8 @@
 <pre><code>package.json
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;,</span><br><span class="line">  &quot;start&quot;: &quot;webpack-dev-server --inline --hot&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <pre><code>打开localhost:7777
-</code></pre>]]></content>
+</code></pre><p><img src="https://github.com/latale/photos/blob/master/xikapreview.png?raw=true" alt=""></p>
+]]></content>
       
         
         <tags>
