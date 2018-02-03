@@ -1,3 +1,3 @@
+latale.github.io/2018/02/03/webpack配置js打包-css分离/
 latale.github.io/2018/01/07/pythonOS/
-latale.github.io/2017/11/11/ajax/
 latale.github.io/2017/11/11/build1/

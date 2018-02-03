@@ -8,21 +8,18 @@
   
   
   
-  <title>flex布局 | 七月的夏</title>
+  <title>webpack配置js打包+css分离 | 七月的夏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="flex布局 详解flex布局的各种参数~">
-<meta name="keywords" content="瞎扯淡">
+  <meta name="description" content="webpack打包js以及css文件分离">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flex布局">
-<meta property="og:url" content="latale.github.io/2017/07/07/flex布局/index.html">
+<meta property="og:title" content="webpack配置js打包+css分离">
+<meta property="og:url" content="latale.github.io/2018/02/03/webpack配置js打包-css分离/index.html">
 <meta property="og:site_name" content="七月的夏">
-<meta property="og:description" content="flex布局 详解flex布局的各种参数~">
-<meta property="og:image" content="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg">
-<meta property="og:updated_time" content="2018-01-06T17:31:36.442Z">
+<meta property="og:description" content="webpack打包js以及css文件分离">
+<meta property="og:updated_time" content="2018-02-03T13:05:44.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flex布局">
-<meta name="twitter:description" content="flex布局 详解flex布局的各种参数~">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg">
+<meta name="twitter:title" content="webpack配置js打包+css分离">
+<meta name="twitter:description" content="webpack打包js以及css文件分离">
   
     <link rel="alternative" href="/atom.xml" title="七月的夏" type="application/atom+xml">
   
@@ -291,11 +288,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-flex布局" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-webpack配置js打包-css分离" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2017/07/07/flex布局/" class="article-date">
-      <time datetime="2017-07-07T10:53:23.000Z" itemprop="datePublished">2017-07-07</time>
+      <a  href="/2018/02/03/webpack配置js打包-css分离/" class="article-date">
+      <time datetime="2018-02-03T13:03:26.000Z" itemprop="datePublished">2018-02-03</time>
 </a>
 
     </div>
@@ -309,7 +306,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flex布局
+      webpack配置js打包+css分离
     </h1>
   
 
@@ -320,10 +317,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瞎扯淡/">瞎扯淡</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -331,12 +324,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <script src="/assets/js/APlayer.min.js"> </script><p><strong>flex布局</strong></p>
-<p>详解flex布局的各种参数~</p>
+        <script src="/assets/js/APlayer.min.js"> </script><hr>
+<p>webpack打包js以及css文件分离</p>
 <a id="more"></a>
-<p>flexible:能够伸缩或者容易变化,以适应外界条件的变化<br>    box:通用的矩形容器<br>    flex:是flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
-<pre><code>flex布局是基于flex-flow流布局的,容器默认存在两根轴,水平的为主轴,垂直的为侧轴,主轴开始位置和边框交叉点叫做main start,结束位置叫做main end,侧轴开始位置和边框的交叉点叫做cross start,结束位置叫做cross end,项目默认主轴排列,主轴占据的空间叫做main size,侧轴占据的空间叫做cross size.
-</code></pre><p><strong>1.flex-direction属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">flex-direction属性决定主轴的方向(项目的排列方向)</span><br><span class="line"></span><br><span class="line">flex-direction:row;</span><br><span class="line">row为默认值:主轴为水平方向,起点在左端</span><br><span class="line"></span><br><span class="line">flex-direction:row-reverse;</span><br><span class="line">row-reverse:主轴为水平方向,起点在右端</span><br><span class="line"></span><br><span class="line">flex-direction:column;</span><br><span class="line">column:主轴为垂直方向,起点在上沿</span><br><span class="line"></span><br><span class="line">flex-direction:column-reverse;</span><br><span class="line">column-reverse:主轴为垂直方向,起点在下沿</span><br></pre></td></tr></table></figure><br><strong>2.flex-wrap属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">默认情况下,项目都排在一根轴线上,可以用flex-wrap来定义怎么排列</span><br><span class="line"></span><br><span class="line">flex-wrap:nowrap;</span><br><span class="line">nowrap为默认值:不换行</span><br><span class="line"></span><br><span class="line">flex-wrap:wrap;</span><br><span class="line">wrap:换行,第一行在上方</span><br><span class="line"></span><br><span class="line">flex-wrap:wrap-reverse;</span><br><span class="line">wrap-reverse:换行，第一行在下方</span><br></pre></td></tr></table></figure><br><strong>3.flex-flow属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flex-flow属性是flex-direction属性和flex-wrap属性的简写,默认是row nowrap;</span><br><span class="line"></span><br><span class="line">flex-flow:flex-direction flex-wrap;</span><br></pre></td></tr></table></figure><br><strong>4.justify-content属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">justify-content属性定义了项目在主轴上的对齐方式</span><br><span class="line"></span><br><span class="line">justify-content:flex-start;</span><br><span class="line">flex-start为默认值:左对齐</span><br><span class="line"></span><br><span class="line">justify-content:flex-end;</span><br><span class="line">flex-end:右对齐</span><br><span class="line"></span><br><span class="line">justify-content:center;</span><br><span class="line">center:居中</span><br><span class="line"></span><br><span class="line">justify-content:space-between;</span><br><span class="line">space-between:两端对齐,项目之间的间隔相等</span><br><span class="line"></span><br><span class="line">justify-content:space-around;</span><br><span class="line">space-around:每个项目两侧间隔相等</span><br></pre></td></tr></table></figure><br><strong>5.align-items属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">align-items属性定义项目在侧轴上如何对齐</span><br><span class="line"></span><br><span class="line">align-items:flex-start;</span><br><span class="line">flex-start:侧轴开始位置对齐</span><br><span class="line"></span><br><span class="line">align-items:flex-end;</span><br><span class="line">flex-end:侧轴结束位置对齐</span><br><span class="line"></span><br><span class="line">align-items:center;</span><br><span class="line">center:侧轴中点位置对齐</span><br><span class="line"></span><br><span class="line">align-items:baseline;</span><br><span class="line">baseline:项目第一行文字的基线对齐</span><br><span class="line"></span><br><span class="line">align-items:stretch;</span><br><span class="line">strech为默认值:如果项目没有设置高度或者设置为auto,将占满整个容器的高度</span><br></pre></td></tr></table></figure><br><strong>6.align-content属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">align-content属性定义了多根轴线的对齐方式,如果项目只有一根轴线,</span><br><span class="line">该属性不起作用</span><br><span class="line"></span><br><span class="line">align-content:flex-start;</span><br><span class="line">flex-start:和侧轴的起点对齐</span><br><span class="line"></span><br><span class="line">align-content:flex-end;</span><br><span class="line">flex-end:和侧轴的终点对齐</span><br><span class="line"></span><br><span class="line">align-content:center;</span><br><span class="line">center:和侧轴的中点对齐</span><br><span class="line"></span><br><span class="line">align-content:space-between;</span><br><span class="line">space-between:和侧轴的两端对齐</span><br><span class="line"></span><br><span class="line">align-content:space-around;</span><br><span class="line">space-around:每根轴线两侧的间隔都相等</span><br><span class="line"></span><br><span class="line">align-content:strech;</span><br><span class="line">strech为默认值:轴线占满整个侧轴</span><br></pre></td></tr></table></figure><br>—end—<br>have a good trip! <img src="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const path = require(&apos;path&apos;);</span><br><span class="line">const uglify = require(&apos;uglifyjs-webpack-plugin&apos;);</span><br><span class="line">const htmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);</span><br><span class="line">const extractTextWebpackPlugin = require(&apos;extract-text-webpack-plugin&apos;);</span><br><span class="line">const webpack = require(&apos;webpack&apos;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">    context: path.join(__dirname, &apos;src&apos;), //</span><br><span class="line">    entry:&#123;</span><br><span class="line">        entry:&apos;./entry.js&apos; //入口文件</span><br><span class="line">    &#125;,</span><br><span class="line">    output:&#123;</span><br><span class="line">        path: path.resolve(__dirname,&apos;dist/js&apos;), //打包输出文件</span><br><span class="line">        filename: &apos;[name].js&apos;, //输出文件名</span><br><span class="line">        publicPath: &apos;/&apos;  //绝对路径</span><br><span class="line">    &#125;,</span><br><span class="line">    module:&#123;</span><br><span class="line">        rules:[</span><br><span class="line">            &#123;</span><br><span class="line">              test:/\.css$/,</span><br><span class="line">              use:extractTextWebpackPlugin.extract(&#123;  //分离css</span><br><span class="line">                  fallback:&apos;style-loader&apos;,</span><br><span class="line">                  use:[</span><br><span class="line">                      &#123;</span><br><span class="line">                          loader:&apos;css-loader&apos;</span><br><span class="line">                      &#125;,</span><br><span class="line">                      &#123;</span><br><span class="line">                          loader:&apos;postcss-loader&apos;,</span><br><span class="line">                          options:&#123;</span><br><span class="line">                              plugins: [</span><br><span class="line">                                  require(&apos;autoprefixer&apos;)</span><br><span class="line">                              ]</span><br><span class="line">                          &#125;</span><br><span class="line">                      &#125;</span><br><span class="line">                  ]</span><br><span class="line">              &#125;)</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              test:/\.less$/,</span><br><span class="line">              use:extractTextWebpackPlugin.extract(&#123;</span><br><span class="line">                  use: [&apos;css-loader&apos;,&apos;less-loader&apos;],</span><br><span class="line">                  // loader:[&apos;css-loader&apos;,&apos;less-loader&apos;],</span><br><span class="line">                  // use:&apos;css-loader!less-loader&apos;,</span><br><span class="line">                  fallback: &quot;style-loader&quot;</span><br><span class="line">              &#125;)</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              test:/\.(sass|scss)$/,</span><br><span class="line">                use:extractTextWebpackPlugin.extract(&#123;</span><br><span class="line">                    use:[&apos;css-loader&apos;,&apos;sass-loader&apos;,&#123;</span><br><span class="line">                        loader:&apos;postcss-loader&apos;,</span><br><span class="line">                        options: &#123;</span><br><span class="line">                            plugins: (loader) =&gt; [</span><br><span class="line">                                require(&apos;autoprefixer&apos;), //加浏览器前缀</span><br><span class="line">                            ]</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;]</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                test:/\.(jpg|png|gif|jpeg)$/,</span><br><span class="line">                use:[</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader:&apos;url-loader&apos;,</span><br><span class="line">                        options:&#123;</span><br><span class="line">                            limit:1000,</span><br><span class="line">                            name:&apos;[name][hash:8].[ext]&apos;, //指定名字</span><br><span class="line">                            output:&apos;images/&apos;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        new webpack.optimize.UglifyJsPlugin(), //js压缩</span><br><span class="line">        new htmlWebpackPlugin(&#123;</span><br><span class="line">            minify:&#123;</span><br><span class="line">                removeAttributeQuotes:true</span><br><span class="line">            &#125;,</span><br><span class="line">            hash:true,</span><br><span class="line">            template:&apos;index.html&apos;</span><br><span class="line">        &#125;),</span><br><span class="line">        new extractTextWebpackPlugin(&quot;css/[name].css&quot;), //配置分离css</span><br><span class="line">        new webpack.ProvidePlugin(&#123; //配置jquery</span><br><span class="line">            $: &quot;jquery&quot;,</span><br><span class="line">            jQuery: &quot;jquery&quot;</span><br><span class="line">        &#125;)</span><br><span class="line">    ],</span><br><span class="line">    node: &#123;</span><br><span class="line">        fs: &apos;empty&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        contentBase:path.resolve(__dirname,&apos;dist&apos;),</span><br><span class="line">        host:&apos;localhost&apos;,</span><br><span class="line">        compress:true,</span><br><span class="line">        port:7777</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -345,13 +336,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2017/07/07/flex布局/">flex布局</a></p>
+        <p><span>本文标题:</span><a  href="/2018/02/03/webpack配置js打包-css分离/">webpack配置js打包+css分离</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 七月的夏 的个人博客">七月的夏</a></p>
-        <p><span>发布时间:</span>2017年07月07日 - 18时53分</p>
-        <p><span>最后更新:</span>2018年01月07日 - 01时31分</p>
+        <p><span>发布时间:</span>2018年02月03日 - 21时03分</p>
+        <p><span>最后更新:</span>2018年02月03日 - 21时05分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/07/flex布局/" title="flex布局">latale.github.io/2017/07/07/flex布局/</a>
-            <span class="copy-path" data-clipboard-text="原文: latale.github.io/2017/07/07/flex布局/　　作者: 七月的夏" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/02/03/webpack配置js打包-css分离/" title="webpack配置js打包+css分离">latale.github.io/2018/02/03/webpack配置js打包-css分离/</a>
+            <span class="copy-path" data-clipboard-text="原文: latale.github.io/2018/02/03/webpack配置js打包-css分离/　　作者: 七月的夏" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -362,18 +353,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2017/07/08/vpn/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          炒鸡好用的翻墙哟
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2017/07/07/呼吸轮播图/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">简易呼吸轮播图</div>
+    <a  href="/2018/01/07/pythonOS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python常用文件操作</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -446,13 +428,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2017/07/08/vpn/" title="上一篇: 炒鸡好用的翻墙哟">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2017/07/07/呼吸轮播图/" title="下一篇: 简易呼吸轮播图">
+            <a  href="/2018/01/07/pythonOS/" title="下一篇: python常用文件操作">
                 <i class="fa fa-angle-right"></i>
             </a>
         
