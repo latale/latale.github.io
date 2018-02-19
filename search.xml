@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[vue自带的proxytable+axios解决跨域问题]]></title>
+      <title><![CDATA[vue-cli自带的proxytable+axios解决跨域问题]]></title>
       <url>/2018/02/19/vue-proxy/</url>
       <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>vue的axios可以实现本地的数据请求,如果需要跨域,需要用到proxytable来进行配置。</p>
  <a id="more"></a>
