@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="latale.github.io/"/>
-  <updated>2018-02-03T15:54:52.000Z</updated>
+  <updated>2018-02-19T15:42:25.000Z</updated>
   <id>latale.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue自带的proxytable+axios解决跨域问题</title>
+    <link href="latale.github.io/2018/02/19/vue-proxy/"/>
+    <id>latale.github.io/2018/02/19/vue-proxy/</id>
+    <published>2018-02-19T15:18:33.000Z</published>
+    <updated>2018-02-19T15:42:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><pre><code>1.先安装axios</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save-dev</span><br></pre></td></tr></table></figure><pre><code>2.main.js //在main.js中引入axios以及挂载到vue的原型上,这样就可以this.$ajax来进行请求</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$ajax = axios</span><br></pre></td></tr></table></figure><pre><code>3.config/index.js</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">    &apos;/api&apos;: &#123; //代理别名</span><br><span class="line">        target: &apos;http://m.breadtrip.com/api/v2/index/&apos;, //代理地址</span><br><span class="line">        changeOrigin: true, //跨域</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">            &apos;^/api&apos;: &apos;&apos; //重写路由</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure><pre><code>4.请求数据</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.$ajax(&#123;</span><br><span class="line">      url:&apos;/api&apos; //http://m.breadtrip.com/api/v2/index/api</span><br><span class="line">  &#125;).then(res =&gt; &#123;</span><br><span class="line">     console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><pre><code>5.请求到的数据</code></pre><p><img src="http://opfmdske3.bkt.clouddn.com/proxytable.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;pre&gt;&lt;code&gt;1.先安装axios
+&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;g
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="latale.github.io/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>phpmysql</title>
+    <link href="latale.github.io/2018/02/05/phpmysql/"/>
+    <id>latale.github.io/2018/02/05/phpmysql/</id>
+    <published>2018-02-05T02:13:11.000Z</published>
+    <updated>2018-02-19T14:55:27.163Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>phpmysql~<br><a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">class DB&#123;</span><br><span class="line">    public $host;</span><br><span class="line">    public $attr;</span><br><span class="line">    public $username;</span><br><span class="line">    public $password;</span><br><span class="line">    public $dbname;</span><br><span class="line">    public $link;</span><br><span class="line"></span><br><span class="line">    public function __construct($config) &#123;</span><br><span class="line">        isset($config[&apos;attr&apos;]) ? $this-&gt;attr = $config[&apos;attr&apos;] : &apos;localhost&apos;;</span><br><span class="line">        isset($config[&apos;host&apos;]) ? $this-&gt;host = $config[&apos;host&apos;] : &apos;3306&apos;;</span><br><span class="line">        isset($config[&apos;username&apos;]) ? $this-&gt;username = $config[&apos;username&apos;] : &apos;root&apos;;</span><br><span class="line">        isset($config[&apos;password&apos;]) ? $this-&gt;password = $config[&apos;password&apos;] : &apos;root&apos;;</span><br><span class="line">        isset($config[&apos;dbname&apos;]) ? $this-&gt;dbname = $config[&apos;dbname&apos;] : &apos;jianshu&apos;;</span><br><span class="line"></span><br><span class="line">        $this-&gt;connect();</span><br><span class="line">        $this-&gt;setcharset(&apos;utf8&apos;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function connect()</span><br><span class="line">    &#123;</span><br><span class="line">        $this-&gt;link = mysqli_connect($this-&gt;attr.&apos;:&apos;.$this-&gt;host,$this-&gt;username,$this-&gt;password,$this-&gt;dbname);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function query($sql)</span><br><span class="line">    &#123;</span><br><span class="line">       if(!$result =  mysqli_query($this-&gt;link,$sql)) &#123;</span><br><span class="line">           echo myssqli_error();</span><br><span class="line">           echo myssqli_errno();</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">           return $result;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public function setCharset($charset)</span><br><span class="line">    &#123;</span><br><span class="line">        mysqli_set_charset($this-&gt;link,$charset);</span><br><span class="line">    &#125;</span><br><span class="line">    public function fetchAssoc($sql)</span><br><span class="line">    &#123;</span><br><span class="line">        $result = $this-&gt;query($sql);</span><br><span class="line">        $arr = array();</span><br><span class="line">        while($row = mysqli_fetch_assoc($result))</span><br><span class="line">        &#123;</span><br><span class="line">            printf(&quot;%s : %s \n&quot;,$row[&quot;id&quot;],$row[&quot;name&quot;]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public function fetchAssocOrNum($sql,$type)</span><br><span class="line">    &#123;</span><br><span class="line">        ini_set(&quot;display_errors&quot;,&quot;off&quot;);</span><br><span class="line">        $result = $this-&gt;query($sql);</span><br><span class="line"></span><br><span class="line">        if(!in_array($type,array(&apos;assoc&apos;,&apos;row&apos;))) &#123;</span><br><span class="line">            die(&apos;mysqli error!&apos;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        $fucname = mysqli_fetch.&quot;_&quot;.$type;</span><br><span class="line"></span><br><span class="line">        $selectIndex = strripos(func_get_args()[0],&apos;select&apos;);</span><br><span class="line">        $fromIndex = strripos(func_get_args()[0],&apos;from&apos;);</span><br><span class="line">        $selectStr = substr(func_get_args()[0],strlen(&apos;select&apos;) + 1,$fromIndex - strlen(&apos;select&apos;));</span><br><span class="line">        $selectArr = explode(&quot;,&quot;,$selectStr);</span><br><span class="line">        $selectArrLen = count($selectArr);</span><br><span class="line"></span><br><span class="line">        switch($type) &#123;</span><br><span class="line">            case &apos;assoc&apos;:</span><br><span class="line">                while($res = $fucname($result)) &#123;</span><br><span class="line">                    foreach($selectArr as $k) &#123;</span><br><span class="line">                        printf(&quot;%s = %s \n&quot;,$k,$res[$k]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            case &apos;row&apos;:</span><br><span class="line">                $num = 0;</span><br><span class="line">                while($res = $fucname($result)) &#123;</span><br><span class="line">                    for($i = 0; $i&lt;$selectArrLen; $i++) &#123;</span><br><span class="line">                        printf(&quot;%d = %s&quot;,$i,$res[$i]);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$db = new DB([</span><br><span class="line">    &apos;attr&apos; =&gt; &apos;127.0.0.1&apos;,</span><br><span class="line">    &apos;host&apos; =&gt; &apos;3306&apos;,</span><br><span class="line">    &apos;username&apos; =&gt; &apos;root&apos;,</span><br><span class="line">    &apos;password&apos; =&gt; &apos;root&apos;,</span><br><span class="line">    &apos;dbname&apos; =&gt; &apos;jianshu&apos;</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">$db-&gt;setCharset(&apos;utf8&apos;);</span><br><span class="line"></span><br><span class="line">$db-&gt;fetchAssocOrNum(&apos;select author,title from contents&apos;,&apos;assoc&apos;);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;phpmysql~&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="php,mysql" scheme="latale.github.io/tags/php-mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>webpack配置js打包+css分离+图片压缩</title>
@@ -59,26 +103,6 @@
   </entry>
   
   <entry>
-    <title>好看的风景</title>
-    <link href="latale.github.io/2017/11/11/build1/"/>
-    <id>latale.github.io/2017/11/11/build1/</id>
-    <published>2017-11-11T15:11:09.000Z</published>
-    <updated>2018-02-04T07:25:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>好看的风景- -<br>emmmmm……<br><a id="more"></a></p><p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""><br><img src="https://raw.githubusercontent.com/latale/photos/master/IMG_20180110_174405B.jpg" alt=""><br><img src="https://github.com/latale/photos/blob/master/398e858c215ff001.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20180202_194308R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20170901_174904R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171030_113709R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171219_113434R.jpg?raw=true" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;好看的风景- -&lt;br&gt;emmmmm……&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Laravel常用实例类</title>
     <link href="latale.github.io/2017/11/11/ajax/"/>
     <id>latale.github.io/2017/11/11/ajax/</id>
@@ -97,6 +121,26 @@
       <category term="laravel" scheme="latale.github.io/tags/laravel/"/>
     
       <category term="php" scheme="latale.github.io/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好看的风景</title>
+    <link href="latale.github.io/2017/11/11/build1/"/>
+    <id>latale.github.io/2017/11/11/build1/</id>
+    <published>2017-11-11T15:11:09.000Z</published>
+    <updated>2018-02-04T07:25:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>好看的风景- -<br>emmmmm……<br><a id="more"></a></p><p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""><br><img src="https://raw.githubusercontent.com/latale/photos/master/IMG_20180110_174405B.jpg" alt=""><br><img src="https://github.com/latale/photos/blob/master/398e858c215ff001.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20180202_194308R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20170901_174904R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171030_113709R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171219_113434R.jpg?raw=true" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;好看的风景- -&lt;br&gt;emmmmm……&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
     
   </entry>
   
@@ -399,51 +443,6 @@
       <category term="javascript" scheme="latale.github.io/tags/javascript/"/>
     
       <category term="mongodb" scheme="latale.github.io/tags/mongodb/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>炒鸡好用的翻墙哟</title>
-    <link href="latale.github.io/2017/07/08/vpn/"/>
-    <id>latale.github.io/2017/07/08/vpn/</id>
-    <published>2017-07-08T06:23:29.000Z</published>
-    <updated>2018-01-06T17:31:36.443Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>自从蓝灯要收费后,我又开始了漫长的寻找翻墙软件的过程~~<br> -&gt; -&gt; 突然有一天,一款叫做ssbetter的进入了我的视线,我岂能放过- -</p> <a id="more"></a><p> <strong>首先我们打开官网</strong> <a href="http://ssbetter.org/" target="_blank" rel="noopener">http://ssbetter.org/</a></p><p> 如图:<br> <img src="https://raw.githubusercontent.com/latale/photos/master/ssbetterLogin.png" alt=""></p><p>注册后登录进去的界面就是这样的….</p><p><img src="https://raw.githubusercontent.com/latale/photos/master/1.jpg" alt=""></p><p>点击左侧的产品订购可以选择月付,年付….咸鱼的我习惯月付….</p><p><img src="https://raw.githubusercontent.com/latale/photos/master/2.png" alt=""></p><p>点击去后,这里有多种参数,默认就可以了,密码随便写一个,因为后面SSR启动的时候直接二维码扫描就知道把配置数据写入了- -(很哇塞)<br><img src="https://raw.githubusercontent.com/latale/photos/master/3.png" alt=""></p><p>…………支付完成后</p><p>点击左边的软件下载,这里有各种系统的sr或者ssr翻墙软件,咸鱼是window的ssr,所以下面的都是window的ssr来操作的,大同小异 - -</p><p><img src="https://raw.githubusercontent.com/latale/photos/master/4.png" alt=""></p><p>一顿操作后,如图打开</p><p><img src="https://raw.githubusercontent.com/latale/photos/master/5.png" alt=""></p><p>其实不用管这个- -因为直接有二维码扫描可以写入,右键ssr的图标有一个二维码扫描</p><p><img src="https://raw.githubusercontent.com/latale/photos/master/6_meitu_2.jpg" alt=""></p><p>回到页面中,点击左侧的服务管理,我选择的是新加坡1的,因为是ssr所以选择ssr二维码</p><p><img src="https://github.com/latale/photos/blob/master/666.jpg?raw=true" alt=""></p><p>点击后会出现一个二维码<br><img src="https://github.com/latale/photos/blob/master/ewm_meitu_3.jpg?raw=true" alt=""></p><p>然后右键系统图标选择二维码扫描,就会扫描当前页面中显示的二维码,然后会跳出个配置完成的页面,点确定<br><img src="https://github.com/latale/photos/blob/master/choose.png?raw=true" alt=""></p><p>然后如图选择刚添加好的服务器<br><img src="https://github.com/latale/photos/blob/master/777.png?raw=true" alt=""></p><p>然后我选择的是PAC代理,就是国外才走代理,或者你想国内国外都走代理,那就选择全局代理~</p><p><img src="https://github.com/latale/photos/blob/master/888.png?raw=true" alt=""></p><p>然后代理规则就选择绕过大陆和局域网好了</p><p><img src="https://github.com/latale/photos/blob/master/999.png?raw=true" alt=""></p><p>ok! try to do it~ -&gt; <a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a></p><p><img src="https://raw.githubusercontent.com/latale/photos/master/100.png" alt=""></p><p>–end–</p><p><font color="yellow"><strong>have a good trip!</strong></font> <img src="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;自从蓝灯要收费后,我又开始了漫长的寻找翻墙软件的过程~~&lt;br&gt; -&amp;gt; -&amp;gt; 突然有一天,一款叫做ssbetter的进入了我的视线,我岂能放过- -&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
-    
-      <category term="skills" scheme="latale.github.io/tags/skills/"/>
-    
-      <category term="黑科技" scheme="latale.github.io/tags/%E9%BB%91%E7%A7%91%E6%8A%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>flex布局</title>
-    <link href="latale.github.io/2017/07/07/flex%E5%B8%83%E5%B1%80/"/>
-    <id>latale.github.io/2017/07/07/flex布局/</id>
-    <published>2017-07-07T10:53:23.000Z</published>
-    <updated>2018-01-06T17:31:36.442Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><strong>flex布局</strong></p><p>详解flex布局的各种参数~</p><a id="more"></a><p>flexible:能够伸缩或者容易变化,以适应外界条件的变化<br>    box:通用的矩形容器<br>    flex:是flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p><pre><code>flex布局是基于flex-flow流布局的,容器默认存在两根轴,水平的为主轴,垂直的为侧轴,主轴开始位置和边框交叉点叫做main start,结束位置叫做main end,侧轴开始位置和边框的交叉点叫做cross start,结束位置叫做cross end,项目默认主轴排列,主轴占据的空间叫做main size,侧轴占据的空间叫做cross size.</code></pre><p><strong>1.flex-direction属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">flex-direction属性决定主轴的方向(项目的排列方向)</span><br><span class="line"></span><br><span class="line">flex-direction:row;</span><br><span class="line">row为默认值:主轴为水平方向,起点在左端</span><br><span class="line"></span><br><span class="line">flex-direction:row-reverse;</span><br><span class="line">row-reverse:主轴为水平方向,起点在右端</span><br><span class="line"></span><br><span class="line">flex-direction:column;</span><br><span class="line">column:主轴为垂直方向,起点在上沿</span><br><span class="line"></span><br><span class="line">flex-direction:column-reverse;</span><br><span class="line">column-reverse:主轴为垂直方向,起点在下沿</span><br></pre></td></tr></table></figure><br><strong>2.flex-wrap属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">默认情况下,项目都排在一根轴线上,可以用flex-wrap来定义怎么排列</span><br><span class="line"></span><br><span class="line">flex-wrap:nowrap;</span><br><span class="line">nowrap为默认值:不换行</span><br><span class="line"></span><br><span class="line">flex-wrap:wrap;</span><br><span class="line">wrap:换行,第一行在上方</span><br><span class="line"></span><br><span class="line">flex-wrap:wrap-reverse;</span><br><span class="line">wrap-reverse:换行，第一行在下方</span><br></pre></td></tr></table></figure><br><strong>3.flex-flow属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">flex-flow属性是flex-direction属性和flex-wrap属性的简写,默认是row nowrap;</span><br><span class="line"></span><br><span class="line">flex-flow:flex-direction flex-wrap;</span><br></pre></td></tr></table></figure><br><strong>4.justify-content属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">justify-content属性定义了项目在主轴上的对齐方式</span><br><span class="line"></span><br><span class="line">justify-content:flex-start;</span><br><span class="line">flex-start为默认值:左对齐</span><br><span class="line"></span><br><span class="line">justify-content:flex-end;</span><br><span class="line">flex-end:右对齐</span><br><span class="line"></span><br><span class="line">justify-content:center;</span><br><span class="line">center:居中</span><br><span class="line"></span><br><span class="line">justify-content:space-between;</span><br><span class="line">space-between:两端对齐,项目之间的间隔相等</span><br><span class="line"></span><br><span class="line">justify-content:space-around;</span><br><span class="line">space-around:每个项目两侧间隔相等</span><br></pre></td></tr></table></figure><br><strong>5.align-items属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">align-items属性定义项目在侧轴上如何对齐</span><br><span class="line"></span><br><span class="line">align-items:flex-start;</span><br><span class="line">flex-start:侧轴开始位置对齐</span><br><span class="line"></span><br><span class="line">align-items:flex-end;</span><br><span class="line">flex-end:侧轴结束位置对齐</span><br><span class="line"></span><br><span class="line">align-items:center;</span><br><span class="line">center:侧轴中点位置对齐</span><br><span class="line"></span><br><span class="line">align-items:baseline;</span><br><span class="line">baseline:项目第一行文字的基线对齐</span><br><span class="line"></span><br><span class="line">align-items:stretch;</span><br><span class="line">strech为默认值:如果项目没有设置高度或者设置为auto,将占满整个容器的高度</span><br></pre></td></tr></table></figure><br><strong>6.align-content属性</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">align-content属性定义了多根轴线的对齐方式,如果项目只有一根轴线,</span><br><span class="line">该属性不起作用</span><br><span class="line"></span><br><span class="line">align-content:flex-start;</span><br><span class="line">flex-start:和侧轴的起点对齐</span><br><span class="line"></span><br><span class="line">align-content:flex-end;</span><br><span class="line">flex-end:和侧轴的终点对齐</span><br><span class="line"></span><br><span class="line">align-content:center;</span><br><span class="line">center:和侧轴的中点对齐</span><br><span class="line"></span><br><span class="line">align-content:space-between;</span><br><span class="line">space-between:和侧轴的两端对齐</span><br><span class="line"></span><br><span class="line">align-content:space-around;</span><br><span class="line">space-around:每根轴线两侧的间隔都相等</span><br><span class="line"></span><br><span class="line">align-content:strech;</span><br><span class="line">strech为默认值:轴线占满整个侧轴</span><br></pre></td></tr></table></figure><br>—end—<br>have a good trip! <img src="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;flex布局&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;详解flex布局的各种参数~&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
     
   </entry>
   

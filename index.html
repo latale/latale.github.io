@@ -202,14 +202,14 @@
                             
                                 <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
                             
-                            <div class="aplayer" data-id="001l7Cn308BiK4" data-server="tencent" data-type="song" data-theme="rgba(0,0,0,0.7)" data-autoplay="true"></div>
+                            <div class="aplayer" data-id="002laWsA44mP31" data-server="tencent" data-type="song" data-theme="rgba(0,0,0,0.7)" data-autoplay="true"></div>
                         </ul>
                     </nav>
                 </section>
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax-javascript/" style="font-size: 10px;">ajax,javascript</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodeJs/" style="font-size: 10px;">nodeJs</a> <a href="/tags/object/" style="font-size: 15px;">object</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/prototype/" style="font-size: 10px;">prototype</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/skills/" style="font-size: 12.5px;">skills</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/瞎扯淡/" style="font-size: 17.5px;">瞎扯淡</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a> <a href="/tags/黑科技/" style="font-size: 10px;">黑科技</a>
+                        <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/ajax-javascript/" style="font-size: 10px;">ajax,javascript</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/laravel/" style="font-size: 15px;">laravel</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/nodeJs/" style="font-size: 10px;">nodeJs</a> <a href="/tags/object/" style="font-size: 15px;">object</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/php-mysql/" style="font-size: 10px;">php,mysql</a> <a href="/tags/prototype/" style="font-size: 10px;">prototype</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/skills/" style="font-size: 12.5px;">skills</a> <a href="/tags/var/" style="font-size: 10px;">var</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/瞎扯淡/" style="font-size: 17.5px;">瞎扯淡</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a> <a href="/tags/黑科技/" style="font-size: 10px;">黑科技</a>
                     </div>
                 </section>
                 
@@ -288,6 +288,143 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-vue-proxy" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/02/19/vue-proxy/" class="article-date">
+      <time datetime="2018-02-19T15:18:33.000Z" itemprop="datePublished">2018-02-19</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/02/19/vue-proxy/">vue自带的proxytable+axios解决跨域问题</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <script src="/assets/js/APlayer.min.js"> </script><pre><code>1.先安装axios
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save-dev</span><br></pre></td></tr></table></figure>
+<pre><code>2.main.js //在main.js中引入axios以及挂载到vue的原型上,这样就可以this.$ajax来进行请求
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$ajax = axios</span><br></pre></td></tr></table></figure>
+<pre><code>3.config/index.js
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">proxyTable: &#123;</span><br><span class="line">    &apos;/api&apos;: &#123; //代理别名</span><br><span class="line">        target: &apos;http://m.breadtrip.com/api/v2/index/&apos;, //代理地址</span><br><span class="line">        changeOrigin: true, //跨域</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">            &apos;^/api&apos;: &apos;&apos; //重写路由</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<pre><code>4.请求数据
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.$ajax(&#123;</span><br><span class="line">      url:&apos;/api&apos; //http://m.breadtrip.com/api/v2/index/api</span><br><span class="line">  &#125;).then(res =&gt; &#123;</span><br><span class="line">     console.log(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code>5.请求到的数据
+</code></pre><p><img src="http://opfmdske3.bkt.clouddn.com/proxytable.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-phpmysql" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/02/05/phpmysql/" class="article-date">
+      <time datetime="2018-02-05T02:13:11.000Z" itemprop="datePublished">2018-02-05</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2018/02/05/phpmysql/">phpmysql</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>phpmysql~<br></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php-mysql/">php,mysql</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a   href="/2018/02/05/phpmysql/#more">查看更多 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-webpack配置js打包-css分离" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -421,72 +558,6 @@
 
 
   
-    <article id="post-build1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2017/11/11/build1/" class="article-date">
-      <time datetime="2017-11-11T15:11:09.000Z" itemprop="datePublished">2017-11-11</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2017/11/11/build1/">好看的风景</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>好看的风景- -<br>emmmmm……<br></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瞎扯淡/">瞎扯淡</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2017/11/11/build1/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-ajax" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -533,6 +604,72 @@
       
         <p class="article-more-link">
           <a   href="/2017/11/11/ajax/#more">查看更多 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-build1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/11/11/build1/" class="article-date">
+      <time datetime="2017-11-11T15:11:09.000Z" itemprop="datePublished">2017-11-11</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/11/11/build1/">好看的风景</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>好看的风景- -<br>emmmmm……<br></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/瞎扯淡/">瞎扯淡</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a   href="/2017/11/11/build1/#more">查看更多 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -799,139 +936,6 @@
       
         <p class="article-more-link">
           <a   href="/2017/09/20/chromeADB调试/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-node爬虫" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2017/09/18/node爬虫/" class="article-date">
-      <time datetime="2017-09-18T09:03:22.000Z" itemprop="datePublished">2017-09-18</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2017/09/18/node爬虫/">node爬虫简书文章~</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>node爬虫简书文章~</p>
-<p>node爬虫简书文章,用的是Sequelize存到数据库里</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2017/09/18/node爬虫/#more">查看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-cluster模块" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2017/09/04/cluster模块/" class="article-date">
-      <time datetime="2017-09-04T02:58:23.000Z" itemprop="datePublished">2017-09-04</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2017/09/04/cluster模块/">Node的cluster模块详解</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>cluster是node的内置模块，用来nodeJs多核多进程处理。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodeJs/">nodeJs</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a   href="/2017/09/04/cluster模块/#more">查看更多 >></a>
         </p>
       
       <div class="clearfix"></div>

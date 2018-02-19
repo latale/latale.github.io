@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>latale.github.io/2018/02/19/vue-proxy/</loc>
+    
+    <lastmod>2018-02-19T15:42:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>latale.github.io/2018/02/05/phpmysql/</loc>
+    
+    <lastmod>2018-02-19T14:55:27.163Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>latale.github.io/2017/11/11/build1/</loc>
     
     <lastmod>2018-02-04T07:25:51.000Z</lastmod>
@@ -37,13 +51,6 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/07/10/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AE%E6%92%AD%E5%9B%BE/</loc>
-    
-    <lastmod>2018-01-06T17:31:36.445Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>latale.github.io/2017/06/22/%E7%80%91%E5%B8%83%E6%B5%81/</loc>
     
     <lastmod>2018-01-06T17:31:36.445Z</lastmod>
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/08/02/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
+    <loc>latale.github.io/2017/07/10/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AE%E6%92%AD%E5%9B%BE/</loc>
     
     <lastmod>2018-01-06T17:31:36.445Z</lastmod>
     
@@ -65,14 +72,21 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/07/07/%E5%91%BC%E5%90%B8%E8%BD%AE%E6%92%AD%E5%9B%BE/</loc>
+    <loc>latale.github.io/2017/08/02/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
+    
+    <lastmod>2018-01-06T17:31:36.445Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>latale.github.io/2017/06/20/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF/</loc>
     
     <lastmod>2018-01-06T17:31:36.444Z</lastmod>
     
   </url>
   
   <url>
-    <loc>latale.github.io/2017/06/20/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF/</loc>
+    <loc>latale.github.io/2017/07/07/%E5%91%BC%E5%90%B8%E8%BD%AE%E6%92%AD%E5%9B%BE/</loc>
     
     <lastmod>2018-01-06T17:31:36.444Z</lastmod>
     
@@ -93,21 +107,7 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/07/01/var/</loc>
-    
-    <lastmod>2018-01-06T17:31:36.443Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>latale.github.io/2017/09/18/node%E7%88%AC%E8%99%AB/</loc>
-    
-    <lastmod>2018-01-06T17:31:36.443Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>latale.github.io/2017/11/03/nginx/</loc>
     
     <lastmod>2018-01-06T17:31:36.443Z</lastmod>
     
@@ -121,9 +121,16 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/07/13/https%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>latale.github.io/2017/11/03/nginx/</loc>
     
-    <lastmod>2018-01-06T17:31:36.442Z</lastmod>
+    <lastmod>2018-01-06T17:31:36.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>latale.github.io/2017/07/01/var/</loc>
+    
+    <lastmod>2018-01-06T17:31:36.443Z</lastmod>
     
   </url>
   
@@ -149,6 +156,13 @@
   </url>
   
   <url>
+    <loc>latale.github.io/2017/07/13/https%E5%8D%8F%E8%AE%AE/</loc>
+    
+    <lastmod>2018-01-06T17:31:36.442Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>latale.github.io/2017/09/20/chromeADB%E8%B0%83%E8%AF%95/</loc>
     
     <lastmod>2018-01-06T17:31:36.441Z</lastmod>
@@ -163,7 +177,7 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/11/11/ajax/</loc>
+    <loc>latale.github.io/2017/06/20/artitle/</loc>
     
     <lastmod>2018-01-06T17:31:36.440Z</lastmod>
     
@@ -177,7 +191,7 @@
   </url>
   
   <url>
-    <loc>latale.github.io/2017/06/20/artitle/</loc>
+    <loc>latale.github.io/2017/11/11/ajax/</loc>
     
     <lastmod>2018-01-06T17:31:36.440Z</lastmod>
     
