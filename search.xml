@@ -5,7 +5,8 @@
     <entry>
       <title><![CDATA[vue自带的proxytable+axios解决跨域问题]]></title>
       <url>/2018/02/19/vue-proxy/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><a id="more"></a>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>vue的axios可以实现本地的数据请求,如果需要跨域,需要用到proxytable来进行配置。</p>
+ <a id="more"></a>
 <pre><code>1.先安装axios
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install axios --save-dev</span><br></pre></td></tr></table></figure>
 <pre><code>2.main.js //在main.js中引入axios以及挂载到vue的原型上,这样就可以this.$ajax来进行请求
