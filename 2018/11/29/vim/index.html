@@ -8,24 +8,18 @@
   
   
   
-  <title>composer命令新建Laravel项目 | 七月的夏</title>
+  <title>vim | 七月的夏</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="composer命令来新建Laravel项目">
-<meta name="keywords" content="laravel">
+  <meta name="description" content="vim的常用命令行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="composer命令新建Laravel项目">
-<meta property="og:url" content="latale.github.io/2017/09/27/composer新建Laravel项目/index.html">
+<meta property="og:title" content="vim">
+<meta property="og:url" content="latale.github.io/2018/11/29/vim/index.html">
 <meta property="og:site_name" content="七月的夏">
-<meta property="og:description" content="composer命令来新建Laravel项目">
-<meta property="og:image" content="https://raw.githubusercontent.com/latale/photos/master/cd%E5%88%B0%E7%9B%AE%E5%BD%95.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/latale/photos/master/composer%E6%8C%87%E4%BB%A4.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/latale/photos/master/app_key.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/latale/photos/master/laravel%E7%AE%80%E4%BB%8B%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-01-06T17:31:36.441Z">
+<meta property="og:description" content="vim的常用命令行">
+<meta property="og:updated_time" content="2018-11-29T01:59:05.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="composer命令新建Laravel项目">
-<meta name="twitter:description" content="composer命令来新建Laravel项目">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/latale/photos/master/cd%E5%88%B0%E7%9B%AE%E5%BD%95.png">
+<meta name="twitter:title" content="vim">
+<meta name="twitter:description" content="vim的常用命令行">
   
     <link rel="alternative" href="/atom.xml" title="七月的夏" type="application/atom+xml">
   
@@ -295,11 +289,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-composer新建Laravel项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-vim" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2017/09/27/composer新建Laravel项目/" class="article-date">
-      <time datetime="2017-09-27T07:17:33.000Z" itemprop="datePublished">2017-09-27</time>
+      <a  href="/2018/11/29/vim/" class="article-date">
+      <time datetime="2018-11-29T01:56:31.000Z" itemprop="datePublished">2018-11-29</time>
 </a>
 
     </div>
@@ -313,7 +307,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      composer命令新建Laravel项目
+      vim
     </h1>
   
 
@@ -324,10 +318,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -335,40 +325,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <script src="/assets/js/APlayer.min.js"> </script><font color="lightblue"><strong>composer命令来新建Laravel项目</strong></font>
-
+        <script src="/assets/js/APlayer.min.js"> </script><p>vim的常用命令行</p>
 <a id="more"></a>
-<pre><code>1.进入到本地服务器目录下
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd d:\phpstudy\www</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/latale/photos/master/cd%E5%88%B0%E7%9B%AE%E5%BD%95.png" alt=""></p>
-<pre><code>2.使用composer命令新建项目
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project laravel/laravel myLaravel --prefer -dist</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/latale/photos/master/composer%E6%8C%87%E4%BB%A4.png" alt=""></p>
-<font color="lightblue"><strong>.env文件(可以在不同环境有不同的值)</strong></font>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:wq 保存退出</span><br><span class="line">:wqa 保存所有退出</span><br><span class="line">:q! 不保存直接退出</span><br><span class="line">:qa! 有多个文件同时打开并退出</span><br></pre></td></tr></table></figure>
 
-<pre><code>3.打开.env文件,修改mysql配置
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DB_CONNECTION=mysql</span><br><span class="line">DB_HOST=127.0.0.1</span><br><span class="line">DB_PORT=3306</span><br><span class="line">DB_DATABASE=test  //改成你自己数据库的名字</span><br><span class="line">DB_USERNAME=root  //改成你自己数据库的登录名</span><br><span class="line">DB_PASSWORD=root //改成你自己数据库的密码</span><br></pre></td></tr></table></figure>
-<pre><code>PS:假如你要改默认的mysql配置 app/config/database.php
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&apos;mysql&apos; =&gt; [</span><br><span class="line">    &apos;driver&apos; =&gt; &apos;mysql&apos;,</span><br><span class="line">    &apos;host&apos; =&gt; env(&apos;DB_HOST&apos;, &apos;127.0.0.1&apos;),</span><br><span class="line">    &apos;port&apos; =&gt; env(&apos;DB_PORT&apos;, &apos;3306&apos;),</span><br><span class="line">    &apos;database&apos; =&gt; env(&apos;DB_DATABASE&apos;, &apos;forge&apos;),</span><br><span class="line">    &apos;username&apos; =&gt; env(&apos;DB_USERNAME&apos;, &apos;forge&apos;),</span><br><span class="line">    &apos;password&apos; =&gt; env(&apos;DB_PASSWORD&apos;, &apos;&apos;),</span><br><span class="line">    &apos;unix_socket&apos; =&gt; env(&apos;DB_SOCKET&apos;, &apos;&apos;),</span><br><span class="line">    &apos;charset&apos; =&gt; &apos;utf8mb4&apos;,</span><br><span class="line">    &apos;collation&apos; =&gt; &apos;utf8mb4_unicode_ci&apos;,</span><br><span class="line">    &apos;prefix&apos; =&gt; &apos;&apos;,</span><br><span class="line">    &apos;strict&apos; =&gt; true,</span><br><span class="line">    &apos;engine&apos; =&gt; null,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<pre><code>4.env文件修改项目应用的APP_KEY(当克隆项目的时候需要更改)
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan key:generate</span><br><span class="line">APP_KEY=base64:wl+WQulEqHPFeORscRIE4apjVLZUN6MhSjjODByvLDw=</span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/latale/photos/master/app_key.png" alt=""></p>
-<pre><code>5.npm install命令下载package.json的依赖模块
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<pre><code>6.执行脚本
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run production</span><br></pre></td></tr></table></figure>
-<pre><code>7.打开浏览器输入localhost
-</code></pre><p><img src="https://raw.githubusercontent.com/latale/photos/master/laravel%E7%AE%80%E4%BB%8B%E5%9B%BE.png" alt=""></p>
-<p>ok!</p>
-<p><strong>一些配置问题</strong></p>
-<pre><code>composer配置国内镜像(解决下载模块慢的问题)
-composer config -g repo.packagist composer https://packagist.phpcomposer.com
-composer update(一般下载来的项目进行模块的匹配下载)
-有时候遇到类似于下载错误什么php.ini没有找到什么的，可能是fileinfo.ini模块没有开启。
-composer install(项目依赖模块的下载)
-npm install(一些前端依赖模块的下载)
-chmod 777 项目路径(mac下，可能打开网页空白，可能是文件权限不够)
-</code></pre>
       
     </div>
     
@@ -376,13 +336,13 @@ chmod 777 项目路径(mac下，可能打开网页空白，可能是文件权限
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2017/09/27/composer新建Laravel项目/">composer命令新建Laravel项目</a></p>
+        <p><span>本文标题:</span><a  href="/2018/11/29/vim/">vim</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 七月的夏 的个人博客">七月的夏</a></p>
-        <p><span>发布时间:</span>2017年09月27日 - 15时17分</p>
-        <p><span>最后更新:</span>2018年01月07日 - 01时31分</p>
+        <p><span>发布时间:</span>2018年11月29日 - 09时56分</p>
+        <p><span>最后更新:</span>2018年11月29日 - 09时59分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/09/27/composer新建Laravel项目/" title="composer命令新建Laravel项目">latale.github.io/2017/09/27/composer新建Laravel项目/</a>
-            <span class="copy-path" data-clipboard-text="原文: latale.github.io/2017/09/27/composer新建Laravel项目/　　作者: 七月的夏" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/29/vim/" title="vim">latale.github.io/2018/11/29/vim/</a>
+            <span class="copy-path" data-clipboard-text="原文: latale.github.io/2018/11/29/vim/　　作者: 七月的夏" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -393,18 +353,9 @@ chmod 777 项目路径(mac下，可能打开网页空白，可能是文件权限
 
 <nav id="article-nav">
   
-    <a  href="/2017/11/01/JS常用正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JS常用正则表达式
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2017/09/20/chromeADB调试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">chrome调试手机端adb插件</div>
+    <a  href="/2018/02/19/vue-proxy/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue-cli自带的proxytable+axios解决跨域问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -477,13 +428,11 @@ chmod 777 项目路径(mac下，可能打开网页空白，可能是文件权限
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2017/11/01/JS常用正则表达式/" title="上一篇: JS常用正则表达式">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2017/09/20/chromeADB调试/" title="下一篇: chrome调试手机端adb插件">
+            <a  href="/2018/02/19/vue-proxy/" title="下一篇: vue-cli自带的proxytable+axios解决跨域问题">
                 <i class="fa fa-angle-right"></i>
             </a>
         

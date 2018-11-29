@@ -3,6 +3,17 @@
   
     
     <entry>
+      <title><![CDATA[vim]]></title>
+      <url>/2018/11/29/vim/</url>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>vim的常用命令行</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:wq 保存退出</span><br><span class="line">:wqa 保存所有退出</span><br><span class="line">:q! 不保存直接退出</span><br><span class="line">:qa! 有多个文件同时打开并退出</span><br></pre></td></tr></table></figure>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[vue-cli自带的proxytable+axios解决跨域问题]]></title>
       <url>/2018/02/19/vue-proxy/</url>
       <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>vue的axios可以实现本地的数据请求,如果需要跨域,需要用到proxytable来进行配置。</p>
