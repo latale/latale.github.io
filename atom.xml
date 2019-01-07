@@ -306,26 +306,6 @@
   </entry>
   
   <entry>
-    <title>奶茶随记~</title>
-    <link href="latale.github.io/2017/07/23/%E5%A5%B6%E8%8C%B6%E7%9A%84%E5%91%B3%E9%81%93/"/>
-    <id>latale.github.io/2017/07/23/奶茶的味道/</id>
-    <published>2017-07-23T08:15:28.000Z</published>
-    <updated>2018-02-04T07:09:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>喝奶茶…..很好很好……<br><a id="more"></a></p><pre><code>1.一点点，奶味较重，红豆奶茶适合7分甜，本身红豆是很甜，如果正常甜，我这么能吃甜的也觉得太甜..............</code></pre><p>  <img src="https://raw.githubusercontent.com/latale/photos/master/yidiandiantea.jpg" alt=""></p><pre><code>2.一鸣的招牌奶茶，综合感觉不错，焦糖味十足.............</code></pre><p><img src="https://raw.githubusercontent.com/latale/photos/master/yimingtea.jpg" alt=""></p><pre><code>3.品圣喜茶，茶味适中，奶味偏淡....</code></pre><p><img src="https://raw.githubusercontent.com/latale/photos/master/pinshengxicha.jpg" alt=""></p><pre><code>4.一点点换包装了....焦糖7分甜.....很好很好....</code></pre><p><img src="https://github.com/latale/photos/blob/master/IMG_20180203_121939R.jpg?raw=true" alt=""></p><pre><code>5.抹茶星冰乐....全糖.....才能喝.....</code></pre><p><img src="https://github.com/latale/photos/blob/master/IMG_20180102_141704R.jpg?raw=true" alt=""></p><font color="red">未完待续……….</font>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;喝奶茶…..很好很好……&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
-    
-  </entry>
-  
-  <entry>
     <title>协议</title>
     <link href="latale.github.io/2017/07/13/https%E5%8D%8F%E8%AE%AE/"/>
     <id>latale.github.io/2017/07/13/https协议/</id>
@@ -433,6 +413,30 @@
       <category term="瞎扯淡" scheme="latale.github.io/tags/%E7%9E%8E%E6%89%AF%E6%B7%A1/"/>
     
       <category term="音乐" scheme="latale.github.io/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mongoDB使用笔记</title>
+    <link href="latale.github.io/2017/07/09/mongo%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9C/"/>
+    <id>latale.github.io/2017/07/09/mongo命令操作/</id>
+    <published>2017-07-08T18:23:27.000Z</published>
+    <updated>2018-01-06T17:31:36.442Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><font color="red">mongoDB使用笔记</font><p>一些常用的mongoDB命令操作。<br><a id="more"></a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">mongo 使用数据库</span><br><span class="line"></span><br><span class="line">mongod 开机</span><br><span class="line"></span><br><span class="line">mongoimport 导入数据</span><br><span class="line"></span><br><span class="line">**开启mongo服务**</span><br><span class="line"></span><br><span class="line">mongod --dbpath e:\mongoDB (路径)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**连接mongo**</span><br><span class="line"></span><br><span class="line">mongo</span><br><span class="line"></span><br><span class="line">**创建数据库**</span><br><span class="line"></span><br><span class="line">use july</span><br><span class="line"></span><br><span class="line">**查看数据库**</span><br><span class="line"></span><br><span class="line">db</span><br><span class="line"></span><br><span class="line">开机命令:</span><br><span class="line"></span><br><span class="line">mongod --dbpath E:\mongo (数据库存储位置,对应一个个数据库文件)</span><br><span class="line"></span><br><span class="line">1.列出所有数据库</span><br><span class="line"></span><br><span class="line">show dbs</span><br><span class="line"></span><br><span class="line">2.使用某个数据库</span><br><span class="line"></span><br><span class="line">use 数据库名字(blog)</span><br><span class="line">假如我们想新建一个数据库,也是用use命令,如果use后面的几个名字不存在的话,就代表新建这个名字的数据库.</span><br><span class="line"></span><br><span class="line">3.查看当前所在的数据库</span><br><span class="line"></span><br><span class="line">db(命令行就会显示当前的数据库)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4.插入数据</span><br><span class="line"></span><br><span class="line">db.users.insert(&#123;&quot;username&quot;:&quot;july&quot;,&quot;password&quot;:&quot;111&quot;&#125;);</span><br><span class="line">当我们使用insert插入数据时,mongodb如果发现users是个陌生的集合,就会在这个数据库中创建这个集合.</span><br><span class="line"></span><br><span class="line">5.删除数据库</span><br><span class="line"></span><br><span class="line">db.dropDatabase();</span><br><span class="line">不可恢复- -</span><br><span class="line">cls:清屏</span><br><span class="line">ctrl+c 退出数据库操作</span><br><span class="line"></span><br><span class="line">6.导入数据</span><br><span class="line"></span><br><span class="line">有时候我们不会命令行一条一条的insert数据,那么可以将所有的数据卸载一个文件下,然后可以通过带入的方式把数据库</span><br><span class="line"></span><br><span class="line">mongoimport --db blog --collection users --drop --file E:\users.json</span><br><span class="line">--db 要往哪个数据库导入</span><br><span class="line">--collection 要添加到哪个集合</span><br><span class="line">--drop 把集合所有的数据清空</span><br><span class="line">--file 要导入的文件路径</span><br><span class="line"></span><br><span class="line">7.查找数据</span><br><span class="line"></span><br><span class="line">1.全局查找</span><br><span class="line">db.users.find();</span><br><span class="line">如果find中不带任何参数,那么就是查询users这个集合下的所有文档</span><br><span class="line">2.精确查找</span><br><span class="line">db.users.find(&quot;username&quot;:&quot;july&quot;);</span><br><span class="line">3.多条件查找</span><br><span class="line">db.users.find(&quot;username&quot;:&quot;july&quot;,&quot;password&quot;:&quot;111&quot;);</span><br><span class="line">4.大于条件</span><br><span class="line">db.users.find(&#123;&quot;password&quot;:$&#123;$gt:50&#125;&#125;);</span><br><span class="line">5.或者条件</span><br><span class="line">db.users.find(&#123;$or:[&#123;&quot;username&quot;:&quot;july&quot;,&#123;&quot;password&quot;:&quot;111&quot;&#125;&#125;]&#125;);</span><br><span class="line">6.排序</span><br><span class="line">db.users.find().sort(&quot;_id&quot;:-1); //1为升序,-1为降序</span><br><span class="line"></span><br><span class="line">8.修改数据</span><br><span class="line"></span><br><span class="line">db.users.update(&#123;&quot;username&quot;:&quot;july&quot;,&#123;$set:&#123;&quot;password&quot;:222&#125;&#125;&#125;); </span><br><span class="line">//默认修改匹配的第一条</span><br><span class="line">db.users.update(&#123;&quot;username&quot;:&quot;july&quot;,&#123;$set:&#123;&quot;password&quot;:&quot;333&quot;&#125;&#125;,&#123;multi:true&#125;&#125;); </span><br><span class="line">//这样才是修改匹配的所有条,需要在后面加上&#123;multi:true&#125;</span><br><span class="line">db.users.update(&quot;username&quot;:&quot;july&quot;,&#123;&quot;username&quot;:&quot;mike&quot;,&quot;password&quot;:&quot;333&quot;&#125;);</span><br><span class="line">//完全替换,不出现$set关键字</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">9.删除数据</span><br><span class="line"></span><br><span class="line">db.users.remove(&quot;username&quot;:&quot;july&quot;);</span><br><span class="line">//默认删除所有匹配的数据</span><br><span class="line">db.users.remove(&quot;username&quot;:&quot;july&quot;,&#123;justOne:true&#125;);</span><br><span class="line">//只删除匹配的第一条</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/latale/photos/master/mongo.png" alt=""></p><pre><code>这里推荐可视化工具 ----&gt; moogoose</code></pre><p><img src="https://raw.githubusercontent.com/latale/photos/master/mongoose.png" alt=""></p><p>—–end—–</p><p><font color="yellow">have a good trip!</font><img src="https://raw.githubusercontent.com/latale/photos/master/jmg.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;font color=&quot;red&quot;&gt;mongoDB使用笔记&lt;/font&gt;
+
+&lt;p&gt;一些常用的mongoDB命令操作。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="javascript" scheme="latale.github.io/tags/javascript/"/>
+    
+      <category term="mongodb" scheme="latale.github.io/tags/mongodb/"/>
     
   </entry>
   
