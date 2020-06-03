@@ -101,6 +101,22 @@
     </entry>
     
     <entry>
+      <title><![CDATA[好看的风景]]></title>
+      <url>/2017/11/11/build1/</url>
+      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>好看的风景- -<br>emmmmm……<br><a id="more"></a></p>
+<p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""><br><img src="https://raw.githubusercontent.com/latale/photos/master/IMG_20180110_174405B.jpg" alt=""><br><img src="https://github.com/latale/photos/blob/master/398e858c215ff001.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20180202_194308R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20170901_174904R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171030_113709R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171219_113434R.jpg?raw=true" alt=""></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 瞎扯淡 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Laravel常用实例类]]></title>
       <url>/2017/11/11/ajax/</url>
       <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><h2 id="Laravel常用实例类"><a href="#Laravel常用实例类" class="headerlink" title="Laravel常用实例类"></a>Laravel常用实例类</h2><a id="more"></a>
@@ -118,22 +134,6 @@ Illuminate\Support\Facades\Session;
             <tag> laravel </tag>
             
             <tag> php </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[好看的风景]]></title>
-      <url>/2017/11/11/build1/</url>
-      <content type="html"><![CDATA[<script src="\assets\js\APlayer.min.js"> </script><p>好看的风景- -<br>emmmmm……<br><a id="more"></a></p>
-<p><img src="https://github.com/latale/photos/blob/master/b1.jpg?raw=true" alt=""><br><img src="https://raw.githubusercontent.com/latale/photos/master/IMG_20180110_174405B.jpg" alt=""><br><img src="https://github.com/latale/photos/blob/master/398e858c215ff001.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20180202_194308R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20170901_174904R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171030_113709R.jpg?raw=true" alt=""><br><img src="https://github.com/latale/photos/blob/master/IMG_20171219_113434R.jpg?raw=true" alt=""></p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 瞎扯淡 </tag>
             
         </tags>
         
@@ -809,9 +809,9 @@ Javascript实现继承的几种方式
             
             <tag> javascript </tag>
             
-            <tag> object </tag>
-            
             <tag> prototype </tag>
+            
+            <tag> object </tag>
             
         </tags>
         
