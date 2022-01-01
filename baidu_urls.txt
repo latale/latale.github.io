@@ -1,3 +1,0 @@
-latale.github.io/2018/11/29/vim/
-latale.github.io/2018/02/19/vue-proxy/
-latale.github.io/2018/02/05/phpmysql/
